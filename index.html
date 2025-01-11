@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Could We Go on a Date?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #fd97fa;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        #button-container {
+            margin-top: 30px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        #yes-button {
+            background-color: #28a745;
+            color: white;
+        }
+        #no-button {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Replacing the text with an image -->
+    <img src="date.png" alt="Could We Go on a Date?">
+
+    <div id="button-container">
+        <button id="yes-button">Yes</button>
+        <button id="no-button">No</button>
+    </div>
+    <img src="erm-fingers.gif" alt="Fun GIF">
+
+    <script>
+        const noButton = document.getElementById('no-button');
+        const yesButton = document.getElementById('yes-button');
+
+        noButton.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+            const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        yesButton.addEventListener('click', () => {
+            window.location.href = 'yes.html';
+        });
+    </script>
+</body>
+</html>
